@@ -250,8 +250,8 @@
             if (x = $image_img.data('position'))
                 $image.css('background-position', x);
 
-            // Hide original img.
-            $image_img.hide();
+            if($(this).find('a').attr('href').indexOf('youtu') < 0)
+                $image_img.hide();
 
             // Hack: IE<11 doesn't support pointer-events, which means clicks to our image never
             // land as they're blocked by the thumbnail's caption overlay gradient. This just forces
@@ -274,20 +274,8 @@
         // Poptrox.
         $main.poptrox({
             baseZIndex: 20000,
-            caption: function ($a) {
-                var $image_img = $a.children('img');
-                var data = exifDatas[$image_img.data('name')];
-                // if (data === undefined) {
-
-                    // EXIF data					
-                EXIF.getData($image_img[0],  function () {
-                    data = exifDatas[$image_img.data('name')] = getExifDataMarkup(this);
-                });
-
-                // }
-                return data !== undefined ? '<p>' + data + '</p>' : ' ';
-            },
             fadeSpeed: 300,
+            caption:'',
             onPopupClose: function () {
                 $body.removeClass('modal-active');
             },
@@ -301,7 +289,7 @@
             popupSpeed: 300,
             popupWidth: 150,
             selector: '.thumb > a.image',
-            usePopupCaption: true,
+            usePopupCaption: false,
             usePopupCloser: true,
             usePopupDefaultStyling: false,
             usePopupForceClose: true,

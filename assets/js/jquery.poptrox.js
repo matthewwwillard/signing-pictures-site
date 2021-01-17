@@ -842,6 +842,17 @@
 
                     break;
 
+                case 'video':
+
+
+                    x.object = $('<video src="" style="vertical-align:bottom" autoplay controls />');
+                    //x.src = tmp[1];
+
+                    x.width = "100%";
+                    x.height = "100%";
+
+                    break;
+
                 default:
                     x.object = $('<img src="" alt="" style="vertical-align:bottom" />');
 
