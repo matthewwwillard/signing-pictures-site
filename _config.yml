@@ -6,17 +6,17 @@ google_analytics: ""
 
 # UI configs
 email: "matt@arandomdeveloper.com"
-title: "Willow Pics"
-subtitle: "I like to create! Here are some of my pictures! Check them out!"
-author: "Matthew Willard"
+title: "Signing Pictures!"
+subtitle: "Pictures from our marriage signing!"
+author: "The Willards"
 header:
- title: "Willow Pics"
- subtitle: "by Matthew (Willow) Willard"
+ title: "Signing Pictures"
+ subtitle: "by The Willards"
 footer:
  name: "Hello!"
- bio: "I make things and take pictures!"
- github: "Site base from <a href=\"https://github.com/ramswaroop/photography\">here!</a>"
+ bio: ""
+ github: ""
 web_design: "AJ"
 social_urls:
-  twitter: "https://www.twitter.com/matthewwwillard"
-  github: "https://www.github.com/matthewwwillard"
+  twitter: ""
+  github: ""
